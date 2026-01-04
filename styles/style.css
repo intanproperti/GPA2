@@ -1,0 +1,94 @@
+/* Layout Dasar */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+/* Background Hero Tetap Menggunakan Link Gambar Script Anda */
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.3)), 
+                url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+/* Galeri Geser Horizontal */
+.scrolling-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 15px;
+    padding-bottom: 20px;
+}
+.scrolling-wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+.scrolling-wrapper::-webkit-scrollbar-thumb {
+    background: #ffc107;
+    border-radius: 10px;
+}
+.gallery-item {
+    flex: 0 0 auto;
+    width: 300px;
+    height: 200px;
+    border-radius: 15px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+/* Card Properti */
+.property-card {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+.property-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 45px rgba(0,0,0,0.1);
+}
+
+/* Tombol Gold */
+.btn-gold {
+    background-color: #ffc107;
+    color: #000;
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 50px;
+}
+
+/* Tombol WhatsApp Mengambang */
+.whatsapp-float {
+    position: fixed;
+    width: 65px;
+    height: 65px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 2px 5px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    text-decoration: none;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
