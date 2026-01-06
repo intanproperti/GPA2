@@ -99,6 +99,107 @@
             padding: 12px 30px;
             border-radius: 50px;
         }
+    
+  /* ===== AWARD / GEAR BADGE ===== */
+.award-badge {
+    position: fixed;
+    bottom: 10px;
+    left: 3px;
+    width: 170px;
+    height: 170px;
+    z-index: 1200;
+}
+
+/* ===== RAYS (GERIGI LANCIP) ===== */
+.rays {
+    position: absolute;
+    inset: 0;
+}
+
+.rays span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 26px;
+    height: 60px;
+    background: linear-gradient(#ffcc33, #f5a800);
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    transform-origin: center bottom;
+}
+
+/* Putar tiap ray */
+.rays span:nth-child(1)  { transform: translate(-50%, -100%) rotate(0deg); }
+.rays span:nth-child(2)  { transform: translate(-50%, -100%) rotate(15deg); }
+.rays span:nth-child(3)  { transform: translate(-50%, -100%) rotate(30deg); }
+.rays span:nth-child(4)  { transform: translate(-50%, -100%) rotate(45deg); }
+.rays span:nth-child(5)  { transform: translate(-50%, -100%) rotate(60deg); }
+.rays span:nth-child(6)  { transform: translate(-50%, -100%) rotate(75deg); }
+.rays span:nth-child(7)  { transform: translate(-50%, -100%) rotate(90deg); }
+.rays span:nth-child(8)  { transform: translate(-50%, -100%) rotate(105deg); }
+.rays span:nth-child(9)  { transform: translate(-50%, -100%) rotate(120deg); }
+.rays span:nth-child(10) { transform: translate(-50%, -100%) rotate(135deg); }
+.rays span:nth-child(11) { transform: translate(-50%, -100%) rotate(150deg); }
+.rays span:nth-child(12) { transform: translate(-50%, -100%) rotate(165deg); }
+.rays span:nth-child(13) { transform: translate(-50%, -100%) rotate(180deg); }
+.rays span:nth-child(14) { transform: translate(-50%, -100%) rotate(195deg); }
+.rays span:nth-child(15) { transform: translate(-50%, -100%) rotate(210deg); }
+.rays span:nth-child(16) { transform: translate(-50%, -100%) rotate(225deg); }
+.rays span:nth-child(17) { transform: translate(-50%, -100%) rotate(240deg); }
+.rays span:nth-child(18) { transform: translate(-50%, -100%) rotate(255deg); }
+.rays span:nth-child(19) { transform: translate(-50%, -100%) rotate(270deg); }
+.rays span:nth-child(20) { transform: translate(-50%, -100%) rotate(285deg); }
+.rays span:nth-child(21) { transform: translate(-50%, -100%) rotate(300deg); }
+.rays span:nth-child(22) { transform: translate(-50%, -100%) rotate(315deg); }
+.rays span:nth-child(23) { transform: translate(-50%, -100%) rotate(330deg); }
+.rays span:nth-child(24) { transform: translate(-50%, -100%) rotate(345deg); }
+
+/* ===== TENGAH ===== */
+.award-center {
+    position: absolute;
+    inset: 47px;
+    background: #FF8F00;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    color: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,.3);
+}
+
+.award-big {
+    font-size: 21px;
+    line-height: 1;
+    
+}
+
+.award-small {
+    font-size: 14px;
+}
+
+/* ===== PITA BAWAH ===== */
+.award-ribbon {
+    position: absolute;
+    bottom: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 100px;
+    background: linear-gradient(#ffcc33, #f39c12);
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
+
+/* FLOAT EFFECT */
+.award-badge {
+    animation: floatBadge 3s ease-in-out infinite;
+}
+
+@keyframes floatBadge {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+}
     </style>
 </head>
 <body>
@@ -124,12 +225,13 @@
             <div class="scrolling-wrapper">
                   <img src="assets/img/denahGPA2 1.jpg" class="gallery-item" alt="Living Room">
                  <img src="assets/img/gbrRumah1.jpg" class="gallery-item" alt="Living Room">
-                  <img src="assets/img/DeretGPA2.jpg" class="gallery-item" alt="Living Room">
-                 <img src="assets/img/interior1.jpg" class="gallery-item" alt="Living Room">
+                  <img src="assets/img/deretGPA2.jpg" class="gallery-item" alt="Living Room">
+                   <img src="assets/img/interior1.jpg" class="gallery-item" alt="Living Room">
                   <img src="assets/img/interior2.jpg" class="gallery-item" alt="Living Room">
-                 <img src="assets/img/interior3.jpg" class="gallery-item" alt="Living Room">
-                 <img src="assets/img/interior4.jpg" class="gallery-item" alt="Living Room">
-                   </div>
+                  <img src="assets/img/interior3.jpg" class="gallery-item" alt="Living Room">
+                  <img src="assets/img/interior4.jpg" class="gallery-item" alt="Living Room">
+
+             </div>
             <p class="text-muted small">* Geser untuk melihat lebih banyak foto</p>
         </div>
     </section>
@@ -159,8 +261,11 @@
                 <div class="col-md-4">
                     <div class="p-4 bg-white rounded-4 shadow-sm">
                         <div class="h1 text-warning mb-3">🌿</div>
-                        <h4 class="fw-bold">Konsep Hijau</h4>
-                        <p class="text-muted">Udara segar dengan taman luas di setiap area.</p>
+                        <h4 class="fw-bold">Promo bulan ini</h4>
+                        <p class="text-muted">DP 0%</p>
+                        <p class="text-muted">Gratis biaya BPHTB,AJB,Baliknama</p>
+                        
+
                     </div>
                 </div>
                 
@@ -168,10 +273,10 @@
                     <div class="p-4 bg-white rounded-4 shadow-sm">
                         <div class="h1 text-warning mb-3">🌿</div>
                         <h4 class="fw-bold">Ilustrasi Kredit</h4>
-                        <p class="text-muted">5th angsuran Rp 3.391.000  </p>
-                         <p class="text-muted">10th angsuran Rp 1.901.000  </p>
-                         <p class="text-muted">15th angsuran Rp 1.414.500  </p>
-                         <p class="text-muted">20th angsuran Rp 1.178.000  </p>
+                        <p class="text-muted">5th angsuran Rp 2.100.000  </p>
+                         <p class="text-muted">10th angsuran Rp 1.600.000  </p>
+                         <p class="text-muted">15th angsuran Rp 1.300.000  </p>
+                         <p class="text-muted">20th angsuran Rp 1.100.000  </p>
 
                     </div> 
                 </div>
@@ -186,13 +291,20 @@
             <div class="row g-4">
                 <div class="col-md-6">
                     <div class="card property-card h-100">
-                          <img src="assets/img/gbrRumah1.jpg" class="gallery-item" alt="Living Room">
+                       
+                         <div class="container">
+                                                         <div class="scrolling-wrapper">
+                                 <img src="assets/img/gbrRumah1.jpg" class="gallery-item" alt="Living Room">
+                                  <img src="assets/img/denahGPA2 1.jpg" class="gallery-item" alt="Living Room">
+
+                             </div>
+                           </div>
                         <div class="card-body p-4">
                             <h5 class="fw-bold">Tipe subsidi (36/92)</h5>
                             <p class="text-muted">Modern minimalis untuk pasangan muda.</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="h5 text-success fw-bold mb-0">Rp 182 Juta-an</span>
-                                <a href="https://wa.me/6289602074000" class="btn btn-sm btn-dark">Detail</a>
+                                <a href="https://sikumbang.tapera.go.id/lokasi-perumahan/PNJ0110102025T001/siteplan" class="btn btn-sm btn-dark">Detail</a>
                             </div>
                         </div>
                     </div>
@@ -213,7 +325,7 @@
                     <li><strong>🚆 Transportasi:</strong> 5 Menit ke pusat pemerintahan</li>
                     <li><strong>🛍️ Hiburan:</strong> 5 Menit ke Alun Alun kabupaten</li>
                 </ul>
-                <a href="https://maps.app.goo.gl/oDokNnBTYKBqw6316" 
+                <a href="https://maps.app.goo.gl/SRPqc8ii7A5Gk8aR7" 
                    target="_blank" 
                    class="btn btn-outline-primary mt-3">
                     Cek Rute di Google Maps
@@ -250,6 +362,23 @@
             <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
         </svg>
     </a>
+    
+<div class="award-badge">
+    <div class="rays">
+        <!-- 24 rays -->
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <div class="award-center">
+        <div class="award-big">Gratis</div>
+        <div class="award-small">DP&Pajak</div>
+    </div>
+
+  </div>
+    
 
 </body>
 </html>
